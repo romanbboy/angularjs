@@ -6,9 +6,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 </head>
 <body>
+    //Блок инициализируется как сущность angularjs с помощью ng-app. Теперь этот div и все что находится в нем подчиняется законам angularjs
     <div ng-app>
+        //ng-model - создает переменную в которую заносится значение(в нашем случае значение в input)
        <input type="text" ng-model="hello">
        <input type="text" ng-model="hello">
+       //Тут мы получаем значение переменной hello. Происходит связывание с ng-model(binding)
         {{hello+'world'}}
     </div>
 </body>
