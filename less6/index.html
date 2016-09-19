@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <meta charset="UTF-8">
+    <title>Angularjs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    
+    
+</head>
+<body>
+   <!-- Работаем с дочерними контроллерами. Вложенные контроллеры-->
+   <!-- Синтаксис as используется для того что бы использовать не $scope а this. За счет этого облегчаем понимание откуда что берется-->
+   <!-- $scope лучше использовать как можно реже. Лучше через as -->
+    <div ng-controller="myCtrl as myCtrl">
+        <div ng-controller="firstCtrl as firstCtrl">
+            <div ng-controller="secondCtrl as secondCtrl">
+               <!--Четко определяем что свойство myLesson находится в контроллере secondCtrl-->
+                {{firstCtrl.myLesson}}
+                <!--Четко определяем что по клику вызывается метод из myCtrl контроллера-->
+                <button ng-click="myCtrl.addLesson()">add lesson</button>
+            </div>
+        </div>
+    </div>
+   
+   
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

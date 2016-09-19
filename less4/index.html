@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <meta charset="UTF-8">
+    <title>Angularjs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    
+    
+</head>
+<body>
+    <div ng-controller="myCtrl">
+        {{hello}}
+        {{getBook()}}
+        <!--ng-click - событие срабатывает при клике -->
+        <!-- В итоге при клике меняется значение в {{hello}}-->
+        <button ng-click="setHello('Foo')">Foo</button>
+        <button ng-click="setHello('Bar')">Bar</button>
+        {{myFactory.hello()}}
+    </div>
+   
+   
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

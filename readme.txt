@@ -1,1 +1,0 @@
-Now, I try to use AngularJs. I will be a cool programmer, I promise
