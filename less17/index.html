@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <meta charset="UTF-8">
+    <title>Angularjs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+</head>
+<body>
+<!--    Transclude в директивах -->
+   Form here
+<!--   передаем в директиву параметр red-->
+    <form wrap-in="red">
+        <div>
+            <label for="">Email</label>
+            <input type="text" placeholder="Enter email">
+        </div>
+        <div>
+            <label for="">Passwod</label>
+            <input type="password" placeholder="Enter password">
+        </div>
+        <button>Submit</button>
+    </form>
+    
+    <script type="text/ng-template" id="red">
+        <div class="red"></div>
+    </script>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

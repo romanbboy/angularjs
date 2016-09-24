@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <meta charset="UTF-8">
+    <title>Angularjs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+<!--    Подключаем lodash для легкой работы с поиском в массивах-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    
+</head>
+<body>
+<!--    Отслеживание событий Ng-route -->
+<!--   Все что связано с ng-route будет работать ТОЛЬКО если сервер подключен(localhost либо уже на самом хостинге)-->
+    <a href="#/">Home</a>
+    <a href="#/posts">Posts</a>
+    <ng-view></ng-view>
+    
+    можно не описывать этот контроллер потому что currentPath возьмется из $rootScope.currentPath
+    <div ng-controller="pathCtrl">
+        Current path is : {{currentPath}}
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <meta charset="UTF-8">
+    <title>Angularjs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+</head>
+<body>
+<!--    Изолированный scope в директиве-->
+    <div ng-controller="myCtrl">
+       <div> My name ctrl is {{name}} </div>
+       <div>My color ctrl is {{color}} <input ng-model="color"></div>
+       <button ng-click="reverse()">Перекрутить</button><br>
+       -----------------------------------
+<!--       Что бы общаться изолированному скоуп с контроллером необходимо передать атрибут name следующим образом:-->
+<!--       {{}} используются только тогда, когда нам нужно только readonly. Когда двусторонняя связь то пишем по простому(как color)-->
+        <foo-bar name="{{name}}" color="color" reverse="reverse()"></foo-bar>
+    </div> 
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
